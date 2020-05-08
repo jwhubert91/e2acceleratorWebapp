@@ -23,3 +23,15 @@ body {
 .landing-button:last-child {
   margin-left: 50px;
 }
+
+.alert {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
