@@ -12,13 +12,18 @@ import {
 // Load User
 export const loadUser = () => async (dispatch) => {
   try {
+    console.log('Attempting the Load User action...');
     const res = await axios.get('/api/auth');
+    console.log(
+      'Successfully received response from GET auth request in Load User action. Now attempting dispatch.'
+    );
 
     dispatch({
       type: USER_LOADED,
       payload: res.data,
     });
   } catch (err) {
+    console.log('Load User action failed.');
     dispatch({
       type: AUTH_ERROR,
     });
